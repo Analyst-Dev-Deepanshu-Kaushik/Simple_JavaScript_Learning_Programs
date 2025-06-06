@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year is Century or Not</title>
+</head>
+
+<body>
+    <h3>Determine whether a year is century or not</h3>
+
+    <script>
+        const year = parseInt(prompt("Enter a year:"));
+
+        if (year % 100 === 0) {
+            document.writeln(`${year} is a century year.`);
+        } else {
+            document.writeln(`${year} is not a century year.`);
+        }
+    </script>
+</body>
+
+</html>
