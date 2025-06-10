@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple banking program</title>
+</head>
+
+<body>
+    <h2>Bank Account Manager</h2>
+
+    <script>
+
+        // Check Bank Account Balance, Deposit OR Withdraw (Only One)
+
+        const accountBalance = parseInt(prompt("Enter your bank account balance: "));
+
+        const selectOptions = parseInt(prompt(`Choose the options (What do you want?):
+                                        1. Check Account Balance.
+                                        2. Deposit Money.
+                                        3. Withdrawl Money.`));
+
+        if (accountBalance <= 0) {
+            document.writeln("Your account balance is zero or negative. Please deposit money to continue using your account.");
+        } else {
+
+            switch (selectOptions) {
+                case 1:
+                    document.writeln(`Your account Balance is: ${accountBalance}`);
+                    break;
+
+                case 2:
+                    const amountDeposit = parseInt(prompt("Enter the amount you want to deposit: "));
+                    if (amountDeposit <= 0) {
+                        document.writeln("You cannot deposit zero or a negative amount.");
+                    } else {
+                        const newBalance = accountBalance + amountDeposit;
+                        document.writeln(`Deposit successful! Your new account balance is ${newBalance}.`);
+                    }
+                    break;
+
+                case 3:
+                    const amountWithdraw = parseInt(prompt("Enter the amount you want to withdraw: "));
+                    if (amountWithdraw > accountBalance) {
+                        document.writeln(`Insufficient balance. You cannot withdraw ${amountWithdraw}. Your current balance is ${accountBalance}.`);
+                    } else if (amountWithdraw <= 0) {
+                        document.writeln("You cannot withdraw zero or a negative amount.");
+                    } else {
+                        const newBalance = accountBalance - amountWithdraw;
+                        document.writeln(`Withdrawal successful! Your new account balance is ${newBalance}.`);
+                    }
+                    break;
+
+                default:
+                    document.writeln("Invalid option selected. Please choose the correct option.");
+                    break;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

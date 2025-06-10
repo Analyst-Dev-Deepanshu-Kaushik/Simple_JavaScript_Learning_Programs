@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details program</title>
+</head>
+
+<body>
+    <script>
+        // Employee Details
+
+        const employeeNames = prompt("Enter Employee Name: ");
+
+        switch (employeeNames) {
+            case "Seth":
+            case "seth":
+                document.writeln(`Hello, Mr. ${employeeNames} (Senior Full Stack Web Developer), your salary is $80000.`);
+                break;
+            case "John":
+            case "john":
+                document.writeln(`Hello, Mr. ${employeeNames} (Senior Data Analyst), your salary is $50000.`);
+                break;
+            case "Kate":
+            case "kate":
+                document.writeln(`Hello, Ms. ${employeeNames} (H.R. Manager), your salary is $55000.`);
+                break;
+            case "Drew":
+            case "drew":
+                document.writeln(`Hello, Mr. ${employeeNames} (L2 Full Stack Web Developer), your salary is $50000.`);
+                break;
+            case "Will":
+            case "will":
+                document.writeln(`Hello, Mr. ${employeeNames} (Senior Software Developer), your salary is $80000.`);
+                break;
+            case "Rhea":
+            case "rhea":
+                document.writeln(`Hello, Ms. ${employeeNames} (Senior Accounts Executive), your salary is $40000.`);
+                break;
+            case "Lucy":
+            case "lucy":
+                document.writeln(`Hello, Ms. ${employeeNames} (Product Manager), your salary is $90000.`);
+                break;
+            case "Alex":
+            case "alex":
+                document.writeln(`Hello, Mr. ${employeeNames} (Senior Software Developer), your salary is $80000.`);
+                break;
+            default:
+                document.writeln("Invalid employee name.");
+                break;
+        }
+
+    </script>
+</body>
+
+</html>

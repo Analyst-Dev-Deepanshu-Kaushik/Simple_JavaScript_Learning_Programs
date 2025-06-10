@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator program using Switch conditinal statement</title>
+</head>
+
+<body>
+    <script>
+        // Switch Conditionals
+
+        // Simple Calculator Example
+
+        const number1 = parseInt(prompt("Enter First Number: "));
+        const number2 = parseInt(prompt("Enter Second Number: "));
+
+        const userinput = parseInt(prompt(`Choose the options:
+                            1 or + for Addition
+                            2 or - for Subtraction
+                            3 or *  Multiplication
+                            4 or / Division`));
+
+
+        switch (userinput) {
+            case 1 || "+":
+                const addition = number1 + number2;
+                document.writeln(`The addition of ${number1} and ${number2} is: `, addition);
+                break;
+            case 2 || "-":
+                const subtraction = number1 - number2;
+                document.writeln(`The subtraction of ${number1} and ${number2} is: `, subtraction);
+                break;
+            case 3 || "*":
+                const multiplication = number1 * number2;
+                document.writeln(`The multiplication of ${number1} and ${number2} is: `, multiplication);
+                break;
+            case 4 || "/":
+                const division = number1 / number2;
+                document.writeln(`The division of ${number1} and ${number2} is: `, division);
+                break;
+            default:
+                document.writeln("Invalid Input. Choose the correct option.");
+                break;
+        }
+    </script>
+</body>
+
+</html>
