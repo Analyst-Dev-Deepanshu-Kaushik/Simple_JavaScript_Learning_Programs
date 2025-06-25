@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Even program using Function</title>
+</head>
+
+<body>
+    <script>
+
+        // Find if a number is Even or Odd by creating a Function
+
+        const number = parseInt(prompt("Enter a number: "));
+
+        function even_odd(number) {
+            if (number % 2 === 0) {
+                return document.writeln(`${number} is Even`);
+            }
+            else {
+                return document.writeln(`${number} is Odd`);
+            }
+        }
+
+        even_odd(number);
+
+    </script>
+</body>
+
+</html>

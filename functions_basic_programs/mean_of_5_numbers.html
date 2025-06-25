@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mean of 5 Numbers</title>
+</head>
+
+<body>
+    <script>
+        // Find the mean of 5 numbers by creating function.
+        const number1 = parseInt(prompt("Enter first number: "));
+        const number2 = parseInt(prompt("Enter second number: "));
+        const number3 = parseInt(prompt("Enter third number: "));
+        const number4 = parseInt(prompt("Enter fourth number: "));
+        const number5 = parseInt(prompt("Enter fifthnumber: "));
+
+        document.writeln(`First number is:  ${number1}` + `<br>`);
+        document.writeln(`Second number is:  ${number2}` + `<br>`);
+        document.writeln(`Third number is:  ${number3}` + `<br>`);
+        document.writeln(`Fourth number is:  ${number4}` + `<br>`);
+        document.writeln(`Fifth number is:  ${number5}` + `<br>`);
+
+        function nums_mean(number1, number2, number3, number4, number5) {
+
+            if (isNaN(number1) || isNaN(number2) || isNaN(number3) || isNaN(number4) || isNaN(number5)) {
+                document.writeln("Please Enter valid number.");
+            }
+            else {
+                let mean = (number1 + number2 + number3 + number4 + number5) / 5;
+                return document.writeln(`The mean of ${number1}, ${number2}, ${number3}, ${number4} and ${number5} is: `, mean);
+            }
+        }
+        nums_mean(number1, number2, number3, number4, number5);
+    </script>
+</body>
+
+</html>
