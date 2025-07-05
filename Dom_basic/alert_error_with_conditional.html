@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Question: Write a program using prompt function to take input of age as a value from the user and use alert to tell him if he can drive? and use console.error to log the error if the age entered is negative or invalid?
+        const age = parseInt(prompt("Enter your age: "));
+        function driveAlert(age) {
+            if (isNaN(age)) {
+                console.error("Please enter a valid age.");
+            } else if (age < 0 || age > 80) {
+                console.error("Please enter the age between 1 to 80 only.");
+            } else if (age >= 18) {
+                alert("You can drive!");
+            } else {
+                alert("You can't drive!");
+            }
+        }
+
+        driveAlert(age);
+
+
+
+    </script>
+</body>
+
+</html>

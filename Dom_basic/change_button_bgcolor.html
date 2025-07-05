@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color using DOM</title>
+</head>
+
+<body>
+
+    <button id="button" onclick="changeColor()">Click for button style</button>
+
+
+    <script>
+        // Question: Change the text color and background color a button element uisng Get Element by ID Property.
+        function changeColor() {
+            let heading = document.getElementById("button");
+            heading.style.color = "white";
+            heading.style.backgroundColor = "brown";
+        }
+    </script>
+</body>
+
+</html>

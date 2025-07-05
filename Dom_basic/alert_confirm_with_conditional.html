@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Question: Write a program using prompt function to take input of age as a value from the user and use alert to tell him if he can drive? and use confirm to ask the user if he wants to see the prompt again?
+        const age = parseInt(prompt("Enter your age: "));
+        function driveAlert(age) {
+            if (isNaN(age)) {
+                alert("Please enter a valid age: ");
+            } else if (age < 0 || age > 80) {
+                alert("Please enter the age between 1 to 80 only.");
+            } else if (age >= 18) {
+                alert("You can drive!");
+            } else {
+                alert("You can't drive!");
+            }
+        }
+
+        driveAlert(age);
+
+
+        confirmMessage = confirm("Do you want to show prompt again");
+        if (confirmMessage) {
+            const newAge = parseInt(prompt("Enter your age again:"));
+            driveAlert(age)
+        } else {
+            alert("Okay, no problem!")
+        }
+    </script>
+</body>
+
+</html>
