@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Fetch Content in every 5 seconds</title>
+</head>
+
+<body>
+    <h2></h2>Auto Fetch Content every 5 Seconds</h2>
+    <div id="autoContent">Fetching content...</div>
+
+    <script>
+        function fetchContent() {
+            document.getElementById("autoContent").innerText =
+                "Content fetched at: " + new Date().toLocaleTimeString();
+        }
+
+        setInterval(fetchContent, 5000);
+        fetchContent();
+    </script>
+
+</body>
+
+</html>
