@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Saver using Href</title>
+</head>
+
+<body>
+    <h2>Basic and Simple Bookmark Saver using Href</h2>
+    <input type="text" id="bookmarkInput" placeholder="Enter website URL">
+    <button onclick="saveBookmark()">Save Bookmark</button>
+    <div id="bookmarkList"></div>
+
+    <script>
+        function saveBookmark() {
+            const input = document.getElementById("bookmarkInput");
+            const link = document.createElement("a");
+            link.href = input.value;
+            link.innerText = input.value;
+            link.target = "_blank";
+            const br = document.createElement("br");
+            document.getElementById("bookmarkList").appendChild(link);
+            document.getElementById("bookmarkList").appendChild(br);
+            input.value = "";
+        }
+    </script>
+
+</body>
+
+</html>
